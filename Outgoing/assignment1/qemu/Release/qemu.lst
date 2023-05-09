@@ -31,10 +31,10 @@ Idx Name              Size      VMA       LMA       File off  Algn  Flags
  11 .debug_loc        0000eec9  00000000  00000000  00027ddc  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
  12 .debug_aranges    00000a28  00000000  00000000  00036ca8  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
  13 .debug_ranges     00002968  00000000  00000000  000376d0  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_line       0001b2e6  00000000  00000000  0003a038  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_str        000053d1  00000000  00000000  0005531e  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .comment          00000012  00000000  00000000  0005a6ef  2**0  CONTENTS, READONLY
- 17 .riscv.attributes 00000034  00000000  00000000  0005a701  2**0  CONTENTS, READONLY
+ 14 .debug_line       0001b2e8  00000000  00000000  0003a038  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 15 .debug_str        000053d1  00000000  00000000  00055320  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 16 .comment          00000012  00000000  00000000  0005a6f1  2**0  CONTENTS, READONLY
+ 17 .riscv.attributes 00000034  00000000  00000000  0005a703  2**0  CONTENTS, READONLY
  18 .debug_frame      00002170  00000000  00000000  0005a738  2**2  CONTENTS, READONLY, DEBUGGING, OCTETS
 SYMBOL TABLE:
 20000000 l    d  .init	00000000 .init
@@ -777,73 +777,75 @@ D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/main.c:58
 
 2000039e <task_Hello_VeriSilicon_exec>:
 task_Hello_VeriSilicon_exec():
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:5
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:6
 #include "task_Hello_VeriSilicon.h"
 static void *task_Hello_VeriSilicon;
+
 static void task_Hello_VeriSilicon_exec(void *param)
 {
 	uart_printf("Hello VeriSilicon\r\n");
 2000039e:	20005537          	lui	a0,0x20005
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:4
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:5
 {
 200003a2:	1141                	addi	sp,sp,-16
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:5
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:6
 	uart_printf("Hello VeriSilicon\r\n");
 200003a4:	8f450513          	addi	a0,a0,-1804 # 200048f4 <_global_impure_ptr+0x4>
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:4
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:5
 {
 200003a8:	c606                	sw	ra,12(sp)
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:5
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:6
 	uart_printf("Hello VeriSilicon\r\n");
 200003aa:	715040ef          	jal	ra,200052be <uart_printf>
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:6
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:7
 	osal_delete_task(task_Hello_VeriSilicon);
 200003ae:	900087b7          	lui	a5,0x90008
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:7
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:8
 }
 200003b2:	40b2                	lw	ra,12(sp)
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:6
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:7
 	osal_delete_task(task_Hello_VeriSilicon);
 200003b4:	1607a503          	lw	a0,352(a5) # 90008160 <_sp+0xffff8160>
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:7
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:8
 }
 200003b8:	0141                	addi	sp,sp,16
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:6
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:7
 	osal_delete_task(task_Hello_VeriSilicon);
 200003ba:	4770006f          	j	20001030 <osal_delete_task>
 
 200003be <task_Hello_VeriSilicon_create>:
 task_Hello_VeriSilicon_create():
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:10
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:12
+
 void task_Hello_VeriSilicon_create(void *param)
 {
 	task_Hello_VeriSilicon = osal_create_task(task_Hello_VeriSilicon_exec, "Hello_VeriSilicon", 512, 4, NULL);
 200003be:	200055b7          	lui	a1,0x20005
 200003c2:	20000537          	lui	a0,0x20000
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:9
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:11
 {
 200003c6:	1141                	addi	sp,sp,-16
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:10
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:12
 	task_Hello_VeriSilicon = osal_create_task(task_Hello_VeriSilicon_exec, "Hello_VeriSilicon", 512, 4, NULL);
 200003c8:	4701                	li	a4,0
 200003ca:	4691                	li	a3,4
 200003cc:	20000613          	li	a2,512
 200003d0:	90858593          	addi	a1,a1,-1784 # 20004908 <_global_impure_ptr+0x18>
 200003d4:	39e50513          	addi	a0,a0,926 # 2000039e <task_Hello_VeriSilicon_exec>
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:9
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:11
 {
 200003d8:	c606                	sw	ra,12(sp)
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:10
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:12
 	task_Hello_VeriSilicon = osal_create_task(task_Hello_VeriSilicon_exec, "Hello_VeriSilicon", 512, 4, NULL);
 200003da:	3ff000ef          	jal	ra,20000fd8 <osal_create_task>
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:11
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:13
 }
 200003de:	40b2                	lw	ra,12(sp)
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:10
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:12
 	task_Hello_VeriSilicon = osal_create_task(task_Hello_VeriSilicon_exec, "Hello_VeriSilicon", 512, 4, NULL);
 200003e0:	900087b7          	lui	a5,0x90008
 200003e4:	16a7a023          	sw	a0,352(a5) # 90008160 <_sp+0xffff8160>
-D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:11
+D:/work/VescChallenge/Outgoing/assignment1/galaxy_sdk/tasks/src/task_Hello_VeriSilicon.c:13
 }
 200003e8:	0141                	addi	sp,sp,16
 200003ea:	8082                	ret

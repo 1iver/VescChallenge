@@ -3352,31 +3352,31 @@ OUTPUT(qemu.out elf32-littleriscv)
  .debug_ranges  0x0000000000002778      0x108 d:/programe/nucleistudio/toolchain/gcc/bin/../lib/gcc/riscv-nuclei-elf/10.2.0/rv32imafc/ilp32f\libgcc.a(_udivdi3.o)
  .debug_ranges  0x0000000000002880       0xe8 d:/programe/nucleistudio/toolchain/gcc/bin/../lib/gcc/riscv-nuclei-elf/10.2.0/rv32imafc/ilp32f\libgcc.a(_umoddi3.o)
 
-.debug_line     0x0000000000000000    0x1b2e6
- .debug_line    0x0000000000000000      0x1d8 ./galaxy_sdk/tasks/src/task_Hello_VeriSilicon.o
- .debug_line    0x00000000000001d8      0x9e0 ./galaxy_sdk/drivers/src/hal_uart.o
- .debug_line    0x0000000000000bb8      0x4e9 ./galaxy_sdk/bsp/src/newlib.o
- .debug_line    0x00000000000010a1      0x372 ./galaxy_sdk/bsp/src/portasm.o
- .debug_line    0x0000000000001413      0x1f9 ./galaxy_sdk/bsp/src/startup_riscv.o
- .debug_line    0x000000000000160c      0x28b ./galaxy_sdk/main.o
- .debug_line    0x0000000000001897     0x243f D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\bsp\lib\libbsp_riscv.a(port.c.o)
- .debug_line    0x0000000000003cd6      0x11f D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\bsp\lib\libbsp_riscv.a(soc_init.c.o)
- .debug_line    0x0000000000003df5     0x1b15 D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\bsp\lib\libbsp_riscv.a(soc_sysctl.c.o)
- .debug_line    0x000000000000590a      0x5eb D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\bsp\lib\libbsp_riscv.a(system_pegasus.c.o)
- .debug_line    0x0000000000005ef5     0x105b D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\drivers\lib\libdriver_riscv.a(clock.c.o)
- .debug_line    0x0000000000006f50      0x681 D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\drivers\lib\libdriver_riscv.a(e203_uart.c.o)
- .debug_line    0x00000000000075d1       0xc3 D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\modules\lib\libcommon_riscv.a(vs_logging.c.o)
- .debug_line    0x0000000000007694     0x172d D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\modules\lib\libcommon_riscv.a(uart_printf.c.o)
- .debug_line    0x0000000000008dc1      0x37e D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\modules\lib\libcommon_riscv.a(vpi_error.c.o)
- .debug_line    0x000000000000913f      0x49a D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\osal\lib\libosal_riscv.a(osal_task.c.o)
- .debug_line    0x00000000000095d9     0x806a D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib\libos_riscv.a(tasks.c.o)
- .debug_line    0x0000000000011643      0x61a D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib\libos_riscv.a(list.c.o)
- .debug_line    0x0000000000011c5d     0x2137 D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib\libos_riscv.a(timers.c.o)
- .debug_line    0x0000000000013d94      0xe7d D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib\libos_riscv.a(heap_4.c.o)
- .debug_line    0x0000000000014c11     0x56d2 D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib\libos_riscv.a(queue.c.o)
- .debug_line    0x000000000001a2e3      0x769 d:/programe/nucleistudio/toolchain/gcc/bin/../lib/gcc/riscv-nuclei-elf/10.2.0/rv32imafc/ilp32f\libgcc.a(_udivdi3.o)
- .debug_line    0x000000000001aa4c      0x827 d:/programe/nucleistudio/toolchain/gcc/bin/../lib/gcc/riscv-nuclei-elf/10.2.0/rv32imafc/ilp32f\libgcc.a(_umoddi3.o)
- .debug_line    0x000000000001b273       0x73 d:/programe/nucleistudio/toolchain/gcc/bin/../lib/gcc/riscv-nuclei-elf/10.2.0/rv32imafc/ilp32f\libgcc.a(_clz.o)
+.debug_line     0x0000000000000000    0x1b2e8
+ .debug_line    0x0000000000000000      0x1da ./galaxy_sdk/tasks/src/task_Hello_VeriSilicon.o
+ .debug_line    0x00000000000001da      0x9e0 ./galaxy_sdk/drivers/src/hal_uart.o
+ .debug_line    0x0000000000000bba      0x4e9 ./galaxy_sdk/bsp/src/newlib.o
+ .debug_line    0x00000000000010a3      0x372 ./galaxy_sdk/bsp/src/portasm.o
+ .debug_line    0x0000000000001415      0x1f9 ./galaxy_sdk/bsp/src/startup_riscv.o
+ .debug_line    0x000000000000160e      0x28b ./galaxy_sdk/main.o
+ .debug_line    0x0000000000001899     0x243f D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\bsp\lib\libbsp_riscv.a(port.c.o)
+ .debug_line    0x0000000000003cd8      0x11f D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\bsp\lib\libbsp_riscv.a(soc_init.c.o)
+ .debug_line    0x0000000000003df7     0x1b15 D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\bsp\lib\libbsp_riscv.a(soc_sysctl.c.o)
+ .debug_line    0x000000000000590c      0x5eb D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\bsp\lib\libbsp_riscv.a(system_pegasus.c.o)
+ .debug_line    0x0000000000005ef7     0x105b D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\drivers\lib\libdriver_riscv.a(clock.c.o)
+ .debug_line    0x0000000000006f52      0x681 D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\drivers\lib\libdriver_riscv.a(e203_uart.c.o)
+ .debug_line    0x00000000000075d3       0xc3 D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\modules\lib\libcommon_riscv.a(vs_logging.c.o)
+ .debug_line    0x0000000000007696     0x172d D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\modules\lib\libcommon_riscv.a(uart_printf.c.o)
+ .debug_line    0x0000000000008dc3      0x37e D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\modules\lib\libcommon_riscv.a(vpi_error.c.o)
+ .debug_line    0x0000000000009141      0x49a D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\osal\lib\libosal_riscv.a(osal_task.c.o)
+ .debug_line    0x00000000000095db     0x806a D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib\libos_riscv.a(tasks.c.o)
+ .debug_line    0x0000000000011645      0x61a D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib\libos_riscv.a(list.c.o)
+ .debug_line    0x0000000000011c5f     0x2137 D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib\libos_riscv.a(timers.c.o)
+ .debug_line    0x0000000000013d96      0xe7d D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib\libos_riscv.a(heap_4.c.o)
+ .debug_line    0x0000000000014c13     0x56d2 D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib\libos_riscv.a(queue.c.o)
+ .debug_line    0x000000000001a2e5      0x769 d:/programe/nucleistudio/toolchain/gcc/bin/../lib/gcc/riscv-nuclei-elf/10.2.0/rv32imafc/ilp32f\libgcc.a(_udivdi3.o)
+ .debug_line    0x000000000001aa4e      0x827 d:/programe/nucleistudio/toolchain/gcc/bin/../lib/gcc/riscv-nuclei-elf/10.2.0/rv32imafc/ilp32f\libgcc.a(_umoddi3.o)
+ .debug_line    0x000000000001b275       0x73 d:/programe/nucleistudio/toolchain/gcc/bin/../lib/gcc/riscv-nuclei-elf/10.2.0/rv32imafc/ilp32f\libgcc.a(_clz.o)
 
 .debug_str      0x0000000000000000     0x53d1
  .debug_str     0x0000000000000000      0x221 ./galaxy_sdk/tasks/src/task_Hello_VeriSilicon.o
