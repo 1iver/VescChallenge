@@ -46,47 +46,47 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 SECONDARY_FLASH += \
-qemu.hex \
+assignment1.hex \
 
 SECONDARY_LIST += \
-qemu.lst \
+assignment1.lst \
 
 SECONDARY_SIZE += \
-qemu.siz \
+assignment1.siz \
 
 
 # All Target
-all: qemu.out secondary-outputs
+all: assignment1.out secondary-outputs
 
 # Tool invocations
-qemu.out: $(OBJS) $(USER_OBJS)
+assignment1.out: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GNU RISC-V Cross C++ Linker'
-	riscv-nuclei-elf-g++ -march=rv32imafc -mabi=ilp32f -mtune=nuclei-300-series -mcmodel=medlow -mno-save-restore -O2 -ffunction-sections -fdata-sections -fno-common -Werror -Wall  -g -T "D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\n309_iot_qemu.ld" -nostartfiles -Xlinker --gc-sections -L"D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\bsp\lib" -L"D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\drivers\lib" -L"D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\modules\lib" -L"D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib" -L"D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\osal\lib" -Wl,-Map,"qemu.map" --specs=nano.specs --specs=nosys.specs -o "qemu.out" -Wl,--start-group $(OBJS) $(USER_OBJS) $(LIBS) -Wl,--end-group
+	riscv-nuclei-elf-g++ -march=rv32imafc -mabi=ilp32f -mtune=nuclei-300-series -mcmodel=medlow -mno-save-restore -O2 -ffunction-sections -fdata-sections -fno-common -Werror -Wall  -g -T "D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\n309_iot_qemu.ld" -nostartfiles -Xlinker --gc-sections -L"D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\bsp\lib" -L"D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\drivers\lib" -L"D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\modules\lib" -L"D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\os\lib" -L"D:\work\VescChallenge\Outgoing\assignment1\galaxy_sdk\osal\lib" -Wl,-Map,"assignment1.map" --specs=nano.specs --specs=nosys.specs -o "assignment1.out" -Wl,--start-group $(OBJS) $(USER_OBJS) $(LIBS) -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-qemu.hex: qemu.out
+assignment1.hex: assignment1.out
 	@echo 'Invoking: GNU RISC-V Cross Create Flash Image'
-	riscv-nuclei-elf-objcopy -O ihex "qemu.out"  "qemu.hex"
+	riscv-nuclei-elf-objcopy -O ihex "assignment1.out"  "assignment1.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-qemu.lst: qemu.out
+assignment1.lst: assignment1.out
 	@echo 'Invoking: GNU RISC-V Cross Create Listing'
-	riscv-nuclei-elf-objdump --source --all-headers --demangle --line-numbers --wide "qemu.out" > "qemu.lst"
+	riscv-nuclei-elf-objdump --source --all-headers --demangle --line-numbers --wide "assignment1.out" > "assignment1.lst"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-qemu.siz: qemu.out
+assignment1.siz: assignment1.out
 	@echo 'Invoking: GNU RISC-V Cross Print Size'
-	riscv-nuclei-elf-size --format=berkeley "qemu.out"
+	riscv-nuclei-elf-size --format=berkeley "assignment1.out"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(SECONDARY_FLASH)$(SECONDARY_LIST)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS) qemu.out
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(SECONDARY_FLASH)$(SECONDARY_LIST)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS) assignment1.out
 	-@echo ' '
 
 secondary-outputs: $(SECONDARY_FLASH) $(SECONDARY_LIST) $(SECONDARY_SIZE)
