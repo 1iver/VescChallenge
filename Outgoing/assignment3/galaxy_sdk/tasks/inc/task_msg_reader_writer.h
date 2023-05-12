@@ -9,6 +9,7 @@
 #define _TASK_MSG_READER_WRITER_H_
 #include <stdint.h>           //uint32 definition 
 #include <inttypes.h>
+#include <stdio.h>
 #include "osal_semaphore_api.h"
 #include "osal_task_api.h"
 #include "osal_heap_api.h"

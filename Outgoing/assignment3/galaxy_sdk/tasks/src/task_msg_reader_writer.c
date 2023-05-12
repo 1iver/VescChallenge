@@ -22,7 +22,8 @@ static int reader_msg_handler(void *cobj, uint32_t event_id, void *msg)
     {
         case CUSTOM_EVENT_TIME:
             //llu not support
-            uart_printf("send:%" PRIu32 ", receive:%" PRIu32 "\r\n",
+            uart_printf("msg_index:%" PRIu32,((TimeEventMsg*)msg)->msg_index);
+            uart_printf(", send:%" PRIu32 ", receive:%" PRIu32 "\r\n",
                         (uint32_t)(((TimeEventMsg*)msg)->time),
                         (uint32_t)osal_get_uptime());
             osal_free(msg);
@@ -61,11 +62,11 @@ static void task_msg_writer(void* sync)
         uint32_t msg_index = 0;
         while(1){
             TimeEventMsg* msg = osal_malloc(sizeof(TimeEventMsg));
-            msg->msg_index = msg_index;
+            msg->msg_index = msg_index++;
             msg->time = osal_get_uptime();
             if(vpi_event_notify(CUSTOM_EVENT_TIME,msg)==EVENT_ERROR)
                 break;
-            osal_sleep(1000);
+            osal_sleep(10);
         }
     }else
     {
